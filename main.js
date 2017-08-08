@@ -11,7 +11,7 @@ function searchSubmit(){
           let resultsArray = data.results;
           let parentbody = document.querySelector('body');
           resultsArray.map((i) =>{
-            // console.log(i);
+            console.log(i);
             let backgroundimg = document.createElement('p');
             backgroundimg.setAttribute("style", "background-image: url("+i.thumbnail+");");
             let spantext = document.createElement('span');
