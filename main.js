@@ -9,12 +9,13 @@ function searchSubmit(){
         }
         response.json().then(function(data) {
           for (let i = 0; i < 10; i++){
-            console.log(data.results[i].title);
-            console.log(data.results[i].ingredients);
-            console.log(data.results[i].href);
-            let pictoadd = document.getElementById('result' +i);
-            pictoadd.setAttribute("style", "background-image: url("+data.results[i].thumbnail+");");
-            console.log(data.results[i].thumbnail);
+            let result = data.results[i];
+            let pelementid = document.getElementById('result' +i);
+            pelementid.innerHTML = result.title + "\nIngredients: " + result.ingredients;
+            console.log(result.ingredients);
+            console.log(result.href);
+
+            pelementid.setAttribute("style", "background-image: url("+result.thumbnail+");");
           }
         });
       }
