@@ -40,4 +40,4 @@ function searchSubmit(){
           }
           let pageContent = createProfile(results);
           document.body.innerHTML = pageContent;
-/*
+*/
