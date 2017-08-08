@@ -1,6 +1,6 @@
 function searchSubmit(){
-  console.log($("#textinput").val());
-  fetch("http://recipepuppyproxy.herokuapp.com/api/?q=")
+  let usersearch = $("#textinput").val()
+  fetch("http://recipepuppyproxy.herokuapp.com/api/?q=" + usersearch)
     .then(
       function(response) {
         if (response.status !== 200) {
