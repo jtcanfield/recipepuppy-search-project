@@ -1,1 +1,3 @@
-alert("Hello")
+function searchSubmit(){
+  alert("Test Secesful")
+}
