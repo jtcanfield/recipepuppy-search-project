@@ -12,9 +12,9 @@ function searchSubmit(){
             let result = data.results[i];
             let background = document.getElementById('result' +i);
             let spanelementid = document.getElementById('resultspan' +i);
-            spanelementid.innerHTML = result.title + "\nIngredients: " + result.ingredients;
-            console.log(result.href);
+            spanelementid.innerHTML = result.title + "<br>Ingredients: " + result.ingredients;
             background.setAttribute("style", "background-image: url("+result.thumbnail+");");
+            background.setAttribute("href", result.href);
           }
         });
       }
