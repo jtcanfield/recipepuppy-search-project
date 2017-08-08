@@ -23,3 +23,21 @@ function searchSubmit(){
       console.log("Fetch Error: ", err);
     });
 }
+/* MAP? MAYBE? I DONT EVEN KNOW
+          let results = data.results;
+          function createProfile() {
+              return results.map(function() {
+                    let result = data.results;
+                    let background = document.getElementById('result');
+                    let spanelementid = document.getElementById('resultspan');
+                    spanelementid.innerHTML = result.title + "<br>Ingredients: " + result.ingredients;
+                    background.setAttribute("style", "background-image: url("+result.thumbnail+");");
+                    background.setAttribute("href", result.href);
+
+                  }
+                  )
+              ;
+          }
+          let pageContent = createProfile(results);
+          document.body.innerHTML = pageContent;
+/*
