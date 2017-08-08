@@ -1,3 +1,3 @@
 function searchSubmit(){
-  alert($("#textinput").val());
+  console.log($("#textinput").val());
 }
