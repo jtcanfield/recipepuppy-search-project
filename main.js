@@ -8,8 +8,14 @@ function searchSubmit(){
           return;
         }
         response.json().then(function(data) {
-          for (let i = 0; i < 10; i++)
-          console.log(data.results[i]);
+          for (let i = 0; i < 10; i++){
+            console.log(data.results[i].title);
+            console.log(data.results[i].ingredients);
+            console.log(data.results[i].href);
+            let pictoadd = document.getElementById('result' +i);
+            pictoadd.setAttribute("style", "background-image: url("+data.results[i].thumbnail+");");
+            console.log(data.results[i].thumbnail);
+          }
         });
       }
     )
