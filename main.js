@@ -8,14 +8,23 @@ function searchSubmit(){
           return;
         }
         response.json().then(function(data) {
-          for (let i = 0; i < 10; i++){
-            let result = data.results[i];
-            let background = document.getElementById('result' +i);
-            let spanelementid = document.getElementById('resultspan' +i);
-            spanelementid.innerHTML = result.title + "<br>Ingredients: " + result.ingredients;
-            background.setAttribute("style", "background-image: url("+result.thumbnail+");");
-            background.setAttribute("href", result.href);
-          }
+            let resultsArray = data.results;
+            let parentbody = document.querySelector('body');
+            resultsArray.map((i) =>{
+              console.log(i);
+              let resultCard = document.createElement('p');
+              resultCard.innerHTML = i.title;
+              parentbody.appendChild(resultCard);
+            })
+
+          // for (let i = 0; i < 10; i++){
+          //   let result = data.results[i];
+          //   let background = document.getElementById('result' +i);
+          //   let spanelementid = document.getElementById('resultspan' +i);
+          //   spanelementid.innerHTML = result.title + "<br>Ingredients: " + result.ingredients;
+          //   background.setAttribute("style", "background-image: url("+result.thumbnail+");");
+          //   background.setAttribute("href", result.href);
+          // }
         });
       }
     )
