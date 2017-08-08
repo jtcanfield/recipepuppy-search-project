@@ -8,15 +8,17 @@ function searchSubmit(){
           return;
         }
         response.json().then(function(data) {
-            let resultsArray = data.results;
-            let parentbody = document.querySelector('body');
-            resultsArray.map((i) =>{
-              console.log(i);
-              let resultCard = document.createElement('p');
-              resultCard.innerHTML = i.title;
-              parentbody.appendChild(resultCard);
-            })
-
+          let resultsArray = data.results;
+          let parentbody = document.querySelector('body');
+          resultsArray.map((i) =>{
+            console.log(i);
+            let backgroundimg = document.createElement('p');
+            backgroundimg.setAttribute("style", "background-image: url("+i.thumbnail+");");
+            let spantext = document.createElement('span');
+            spantext.innerHTML = i.title + "<br>Ingredients: " + i.ingredients
+            parentbody.appendChild(backgroundimg);
+            parentbody.appendChild(spantext);
+          })
           // for (let i = 0; i < 10; i++){
           //   let result = data.results[i];
           //   let background = document.getElementById('result' +i);
@@ -32,21 +34,3 @@ function searchSubmit(){
       console.log("Fetch Error: ", err);
     });
 }
-/* MAP? MAYBE? I DONT EVEN KNOW
-          let results = data.results;
-          function createProfile() {
-              return results.map(function() {
-                    let result = data.results;
-                    let background = document.getElementById('result');
-                    let spanelementid = document.getElementById('resultspan');
-                    spanelementid.innerHTML = result.title + "<br>Ingredients: " + result.ingredients;
-                    background.setAttribute("style", "background-image: url("+result.thumbnail+");");
-                    background.setAttribute("href", result.href);
-
-                  }
-                  )
-              ;
-          }
-          let pageContent = createProfile(results);
-          document.body.innerHTML = pageContent;
-*/
