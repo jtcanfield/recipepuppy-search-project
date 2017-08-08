@@ -39,8 +39,8 @@ let testBoolean = false;
 //WHEN YOU DELET THIS YOU ARE BACK TO YOUR REGULAR CODE
 function executor( resolve, reject ){
     let respond = function(){
-        reject(" totally failed ");
         resolve( 1 );
+        reject(" totally failed ");
     };
     // setTimeout(respond, 100 );
     respond();
