@@ -1,3 +1,3 @@
 function searchSubmit(){
-  alert("Test Secesful")
+  alert($("#textinput").val());
 }
