@@ -10,12 +10,11 @@ function searchSubmit(){
         response.json().then(function(data) {
           for (let i = 0; i < 10; i++){
             let result = data.results[i];
-            let pelementid = document.getElementById('result' +i);
-            pelementid.innerHTML = result.title + "\nIngredients: " + result.ingredients;
-            console.log(result.ingredients);
+            let background = document.getElementById('result' +i);
+            let spanelementid = document.getElementById('resultspan' +i);
+            spanelementid.innerHTML = result.title + "\nIngredients: " + result.ingredients;
             console.log(result.href);
-
-            pelementid.setAttribute("style", "background-image: url("+result.thumbnail+");");
+            background.setAttribute("style", "background-image: url("+result.thumbnail+");");
           }
         });
       }
