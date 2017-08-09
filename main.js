@@ -7,11 +7,13 @@ function searchSubmit(){
           console.log(response.status);
           return;
         }
+        console.log(response);
         response.json().then(function(data) {
           let resultsArray = data.results;
-          let parentbody = document.querySelector('body');
+          let parentbody = document.querySelector('#searchappender');
+          parentbody.innerHTML = "";
           resultsArray.map((i) =>{
-            console.log(i);
+            // console.log(i);
             let parentDiv = document.createElement('div');
             parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('p');
