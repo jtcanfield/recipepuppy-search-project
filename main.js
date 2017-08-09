@@ -38,8 +38,10 @@ function searchSubmit(){
     });
 }
 
+
+
+//BELOW IS USED FOR PROMISE TESTINGs
 let testBoolean = false;
-//WHEN YOU DELET THIS YOU ARE BACK TO YOUR REGULAR CODE
 function executor( resolve, reject ){
     let respond = function(){
         resolve( 1 );
@@ -56,15 +58,12 @@ function failure( failureMessage){
   console.log( "it failed" );
   console.log( failureMessage );
 }
-
 //create the promise
 let myPromise = new Promise( executor );
-
 // Add a callback function
 // to take the message from resolve
 function promiseTest(){
   // console.log(myPromise);
-
   myPromise.then( success );
   // myPromise.then(failureMessage);
   myPromise.catch( failure );
