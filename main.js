@@ -1,3 +1,7 @@
+var input = document.getElementById("textinput");
+input.addEventListener('keypress', function(e) {
+  if (e.keyCode === 13) {searchSubmit();}
+});
 function searchSubmit(){
   let usersearch = $("#textinput").val()
   fetch("http://recipepuppyproxy.herokuapp.com/api/?q=" + usersearch)
