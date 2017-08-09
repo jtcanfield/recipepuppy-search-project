@@ -7,7 +7,5 @@ p {
   background-size: cover;
   background-image: url("placeholder.png");
   background-position: center;
-}
-div {
-  background-position: center;
+  margin: auto;
 }
