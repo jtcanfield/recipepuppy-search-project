@@ -5,6 +5,8 @@ p {
   height: 150px;
   width: 150px;
   background-size: cover;
+  background-image: url("placeholder.png");
+  background-position: center;
 }
 div {
   background-position: center;

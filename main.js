@@ -12,11 +12,13 @@ function searchSubmit(){
           let parentbody = document.querySelector('#searchappender');
           parentbody.innerHTML = "";
           resultsArray.map((i) =>{
-            console.log(i);
+            console.log(i.thumbnail);
             let parentDiv = document.createElement('div');
             parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('p');
-            backgroundimg.setAttribute("style", "background-image: url("+i.thumbnail+");");
+            if (i.thumbnail !== ""){
+              backgroundimg.setAttribute("style", "background-image: url("+i.thumbnail+");");
+            }
             let spantext = document.createElement('a');
             spantext.innerHTML = i.title + "<br>Ingredients: " + i.ingredients;
             spantext.setAttribute("href", i.href);
