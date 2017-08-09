@@ -14,8 +14,9 @@ function searchSubmit(){
             console.log(i);
             let backgroundimg = document.createElement('p');
             backgroundimg.setAttribute("style", "background-image: url("+i.thumbnail+");");
-            let spantext = document.createElement('span');
-            spantext.innerHTML = i.title + "<br>Ingredients: " + i.ingredients
+            let spantext = document.createElement('a');
+            spantext.innerHTML = i.title + "<br>Ingredients: " + i.ingredients;
+            spantext.setAttribute("href", i.href);
             parentbody.appendChild(backgroundimg);
             parentbody.appendChild(spantext);
           })
