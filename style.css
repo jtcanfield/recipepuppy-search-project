@@ -1,5 +1,11 @@
+html{
+  text-align: center;
+}
 p {
   height: 150px;
   width: 150px;
   background-size: cover;
+}
+div {
+  display: block;
 }
